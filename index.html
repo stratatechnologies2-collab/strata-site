@@ -226,7 +226,7 @@ tg.addEventListener('click',function(){var n=isDark()?'light':'dark';rt.setAttri
 /* hero ripples */
 var hero=$('#hero');hero.addEventListener('pointerdown',function(e){if(e.target.closest('a,button'))return;var r=hero.getBoundingClientRect();[0,.18].forEach(function(dl){var g=d.createElement('i');g.className='rg';g.style.left=(e.clientX-r.left)+'px';g.style.top=(e.clientY-r.top)+'px';g.style.animationDelay=dl+'s';hero.appendChild(g);setTimeout(function(){g.remove()},1700)})});
 /* project builder */
-var CFG={email:'stratatechnologies2@gmail.com',upwork:'https://www.upwork.com/freelancers/~0147280bd5f50d76f5?mp_source=share',whatsapp:''},gm=$('#c-gm'),wa=$('#c-wa'),upw=$('#c-up'),brief='',bxx=$('#box'),sum=$('#sum'),send=$('#send'),vb=$('#vb'),vo=$('#vo'),ts=$('#ts'),svc=['a new website'],tl='flexible',VB=[[20,'minimal'],[45,'clean'],[70,'balanced'],[90,'bold'],[101,'expressive']];
+var CFG={email:'stratatechnologies2@gmail.com',upwork:'https://www.upwork.com/freelancers/~0147280bd5f50d76f5?mp_source=share',whatsapp:'905391333219'},gm=$('#c-gm'),wa=$('#c-wa'),upw=$('#c-up'),brief='',bxx=$('#box'),sum=$('#sum'),send=$('#send'),vb=$('#vb'),vo=$('#vo'),ts=$('#ts'),svc=['a new website'],tl='flexible',VB=[[20,'minimal'],[45,'clean'],[70,'balanced'],[90,'bold'],[101,'expressive']];
 function vibe(){var v=+vb.value;for(var i=0;i<VB.length;i++)if(v<VB[i][0])return VB[i][1]}
 function toast(t){ts.textContent=t;ts.classList.add('on');setTimeout(function(){ts.classList.remove('on')},2400)}
 function copyText(text,success,failure){if(!navigator.clipboard||!navigator.clipboard.writeText){toast(failure);return}navigator.clipboard.writeText(text).then(function(){toast(success)},function(){toast(failure)})}
