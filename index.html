@@ -93,9 +93,8 @@ section{padding:130px 0;position:relative}.top{display:flex;justify-content:spac
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.stat{border-top:1px solid var(--line);padding-top:16px}.stat b{font:700 38px Manrope;letter-spacing:-.05em;display:block}.stat small{color:var(--muted);font-size:11px;line-height:1.5}
 .values{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}.value{border-top:1px solid var(--line);padding-top:16px}.value b{font:700 13px Manrope;display:block;margin-bottom:7px}.value small{color:var(--muted);font-size:12px;line-height:1.6}
 /* process */
-.process{background:var(--bg2)}.pl{position:relative;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
-.pl:before{content:"";position:absolute;top:-1px;left:0;height:2px;width:calc(var(--p,0)*100%);background:var(--ink)}
-.pi{padding:30px 22px 10px 0;position:relative;transition:opacity .5s}.pi:not(:last-child){border-right:1px solid var(--line);margin-right:22px}
+.process{background:var(--bg2)}.pl{position:relative;display:grid;grid-template-columns:repeat(4,1fr)}
+.pi{padding:30px 22px 10px 0;position:relative;transition:opacity .5s;border-top:1px solid var(--line)}.pi:after{content:"";position:absolute;top:-1px;left:0;width:calc(var(--step,0)*100%);height:2px;background:var(--ink);transition:width .12s linear}.pi:not(:last-child){border-right:1px solid var(--line);margin-right:22px}
 .pi:before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--silver);box-shadow:0 0 0 5px var(--bg2);transition:background .4s,transform .4s var(--spring)}.pi.on:before{background:var(--ink);transform:scale(1.5)}
 .pi .num{font-size:12px}.pi h3{font:700 30px Manrope;letter-spacing:-.05em;margin:40px 0 12px;transition:transform .5s var(--ease)}.pi:hover h3{transform:translateX(8px)}.pi p{font-size:13px;color:var(--muted);line-height:1.8;max-width:220px;margin:0}
 /* cta */
@@ -203,7 +202,7 @@ $$('.rv,.sw').forEach(function(e){io.observe(e)});
 var hd=$('#hd'),prog=$('#prog'),rb=$('#hero .ribbon'),pl=$('#pl'),pis=$$('.pi'),navLinks=$$('header .links a'),navSections=navLinks.map(function(a){return $(a.getAttribute('href'))}),ly=0,mx=0,my=0,tx=0,ty=0;
 function onS(){var y=scrollY,h=d.documentElement.scrollHeight-innerHeight;prog.style.transform='scaleX('+(y/h)+')';hd.classList.toggle('s',y>40);hd.classList.toggle('h',y>ly&&y>500);ly=y;
 var active=null;navSections.forEach(function(s){if(s&&s.getBoundingClientRect().top<=innerHeight*.4)active=s.id});navLinks.forEach(function(a){if(a.getAttribute('href')==='#'+active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
-var r=pl.getBoundingClientRect(),p=Math.max(0,Math.min(1,(innerHeight*.8-r.top)/(innerHeight*.5)));pl.style.setProperty('--p',p);pis.forEach(function(e,i){e.classList.toggle('on',p>=i/pis.length+.02)})}
+pis.forEach(function(e,i){var r=e.getBoundingClientRect(),isStacked=innerWidth<=600,viewPoint=isStacked?innerHeight*.82:innerHeight*.8,travel=isStacked?innerHeight*.45:innerHeight*.7,sharedProgress=Math.max(0,Math.min(1,(viewPoint-pl.getBoundingClientRect().top)/travel)),progress=isStacked?Math.max(0,Math.min(1,(viewPoint-r.top)/travel)):Math.max(0,Math.min(1,sharedProgress*pis.length-i));e.style.setProperty('--step',progress);e.classList.toggle('on',progress>.02)})}
 addEventListener('scroll',onS,{passive:true});onS();
 /* frame loop: ribbon parallax + cursor */
 var cur=$('#cur'),cx=0,cy=0,px=0,py=0;
