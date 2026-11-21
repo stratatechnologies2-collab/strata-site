@@ -4,9 +4,9 @@ Static website for Strata Technologies.
 
 ## Portfolio
 
-The project grid lives in `portfolio.html`. Replace each `.placeholder` element
-in a `.preview` panel with an `<img>` containing the finished project
-screenshot. The live project links are already connected.
+The project grid lives in `portfolio.html`. Add future screenshots to
+`portfolio-images/` and reference them from the corresponding project card.
+The live project links are already connected.
 
 ## Local preview
 
