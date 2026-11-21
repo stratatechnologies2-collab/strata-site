@@ -11,6 +11,7 @@
 <title>Strata Technologies — Websites that make your value clear</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>try{var savedTheme=localStorage.getItem('strata-theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme)}catch(e){}</script>
 <style>
 :root{--bg:#fff;--bg2:#fafafa;--hero:#ededed;--ink:#0a0a0a;--muted:#747982;--line:#e4e6e8;--card:#fff;--silver:#aeb2b8;--ease:cubic-bezier(.2,.75,.25,1);--spring:cubic-bezier(.34,1.56,.64,1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0e10;--bg2:#121316;--hero:#16171a;--ink:#f1f2f3;--muted:#8d929a;--line:#26282c;--card:#16181b;color-scheme:dark}:root:not([data-theme="light"]) .strata-band{filter:invert(.9)}:root:not([data-theme="light"]) .logo-link img{filter:invert(1);mix-blend-mode:screen}}
@@ -222,7 +223,7 @@ function drag(e){var r=pn.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.
 if(!rm){pn.addEventListener('pointermove',drag);pn.addEventListener('pointerleave',function(){core.style.transform=''});core.style.transition='transform .5s cubic-bezier(.2,.75,.25,1)'}
 /* theme toggle */
 var tg=$('#tg'),rt=d.documentElement;function isDark(){var t=rt.getAttribute('data-theme');return t?t==='dark':matchMedia('(prefers-color-scheme:dark)').matches}tg.setAttribute('aria-pressed',isDark());
-tg.addEventListener('click',function(){var n=isDark()?'light':'dark';rt.setAttribute('data-theme',n);tg.setAttribute('aria-pressed',n==='dark')});
+tg.addEventListener('click',function(){var n=isDark()?'light':'dark';rt.setAttribute('data-theme',n);tg.setAttribute('aria-pressed',n==='dark');try{localStorage.setItem('strata-theme',n)}catch(e){}});
 /* hero ripples */
 var hero=$('#hero');hero.addEventListener('pointerdown',function(e){if(e.target.closest('a,button'))return;var r=hero.getBoundingClientRect();[0,.18].forEach(function(dl){var g=d.createElement('i');g.className='rg';g.style.left=(e.clientX-r.left)+'px';g.style.top=(e.clientY-r.top)+'px';g.style.animationDelay=dl+'s';hero.appendChild(g);setTimeout(function(){g.remove()},1700)})});
 /* project builder */
