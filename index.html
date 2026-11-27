@@ -223,7 +223,7 @@ requestAnimationFrame(tick);
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.18});
 $$('.rv,.sw').forEach(function(e){io.observe(e)});
 /* scroll */
-var hd=$('#hd'),prog=$('#prog'),rb=$('#hero .ribbon'),pl=$('#pl'),pis=$$('.pi'),navLinks=$$('header .links a'),navSections=navLinks.map(function(a){return $(a.getAttribute('href'))}),ly=0,mx=0,my=0,tx=0,ty=0;
+var hd=$('#hd'),prog=$('#prog'),rb=$('#hero .ribbon'),pl=$('#pl'),pis=$$('.pi'),navLinks=$$('header .links a'),navSections=navLinks.map(function(a){var href=a.getAttribute('href');return href&&href.charAt(0)==='#'?$(href):null}),ly=0,mx=0,my=0,tx=0,ty=0;
 function onS(){var y=scrollY,h=d.documentElement.scrollHeight-innerHeight;prog.style.transform='scaleX('+(y/h)+')';hd.classList.toggle('s',y>40);hd.classList.toggle('h',y>ly&&y>500);ly=y;
 var active=null;navSections.forEach(function(s){if(s&&s.getBoundingClientRect().top<=innerHeight*.4)active=s.id});navLinks.forEach(function(a){if(a.getAttribute('href')==='#'+active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
 pis.forEach(function(e,i){var r=e.getBoundingClientRect(),isStacked=innerWidth<=600,viewPoint=isStacked?innerHeight*.82:innerHeight*.8,travel=isStacked?innerHeight*.45:innerHeight*.7,sharedProgress=Math.max(0,Math.min(1,(viewPoint-pl.getBoundingClientRect().top)/travel)),progress=isStacked?Math.max(0,Math.min(1,(viewPoint-r.top)/travel)):Math.max(0,Math.min(1,sharedProgress*pis.length-i));e.style.setProperty('--step',progress);e.classList.toggle('on',progress>.02)})}
