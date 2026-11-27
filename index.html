@@ -219,7 +219,7 @@ $$('.sw').forEach(function(el){var i=0;(function w(n){[].slice.call(n.childNodes
 /* preloader */
 var pre=$('#pre'),pc=$('#pc'),pb=$('#pb'),v=0,t0=performance.now();
 d.body.classList.add('lock');
-function tick(now){v=Math.min(100,(now-t0)/(rm?10:500)*100);pc.textContent=Math.floor(v)+'%';pb.style.width=v+'%';if(v<100)requestAnimationFrame(tick);else{pre.classList.add('done');d.body.classList.remove('lock');setTimeout(function(){d.documentElement.classList.add('go');d.body.classList.add('go')},250);setTimeout(function(){pre.style.display='none'},850)}}
+function tick(now){v=Math.min(100,(now-t0)/(rm?10:1100)*100);pc.textContent=Math.floor(v)+'%';pb.style.width=v+'%';if(v<100)requestAnimationFrame(tick);else{pre.classList.add('done');d.body.classList.remove('lock');setTimeout(function(){d.documentElement.classList.add('go');d.body.classList.add('go')},250);setTimeout(function(){pre.style.display='none'},850)}}
 requestAnimationFrame(tick);
 /* reveal */
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.18});
