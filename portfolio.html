@@ -46,6 +46,7 @@ footer{padding:44px 0}.footer-row{display:flex;justify-content:space-between;ali
 </style>
 </head>
 <body>
+<div class="cur" id="cur"><b>VIEW</b></div>
 <header id="hd"><div class="wrap nav">
   <a class="logo" href="/" aria-label="Home"><img src="icons/strata-wordmark.png" alt="Strata Technologies"></a>
   <nav class="links" aria-label="Main navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/portfolio.html" aria-current="page">Portfolio</a><a href="/#about">About</a><a href="/#process">Process</a><a href="/#contact">Contact</a></nav>
@@ -116,7 +117,9 @@ toggle.addEventListener('click',function(){var next=isDark()?'light':'dark';root
 var hd=document.querySelector('#hd'),lastScroll=scrollY;
 function onPortfolioScroll(){var y=scrollY;hd.classList.toggle('s',y>40);hd.classList.toggle('h',y>lastScroll&&y>500);lastScroll=y}
 addEventListener('scroll',onPortfolioScroll,{passive:true});onPortfolioScroll();
-document.getElementById('year').textContent=new Date().getFullYear()
+document.getElementById('year').textContent=new Date().getFullYear();
+var fine=matchMedia('(hover:hover) and (pointer:fine)').matches,cur=document.getElementById('cur'),cx=0,cy=0,px=0,py=0;
+if(fine){document.documentElement.classList.add('cc');addEventListener('mousemove',function(e){px=e.clientX;py=e.clientY;if(!cur.classList.contains('m')){cx=px;cy=py;cur.classList.add('m')}},{passive:true});function moveCursor(){cx+=(px-cx)*.4;cy+=(py-cy)*.4;cur.style.transform='translate('+cx+'px,'+cy+'px) translate(-50%,-50%)';requestAnimationFrame(moveCursor)}requestAnimationFrame(moveCursor);document.querySelectorAll('a,.project,.theme-toggle,.nav-actions .btn').forEach(function(el){el.addEventListener('mouseenter',function(){cur.classList.add('big')});el.addEventListener('mouseleave',function(){cur.classList.remove('big')})})}
 </script>
 
 
