@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#ededed">
@@ -16,16 +15,16 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://stratatechnologies.net/portfolio.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <script>try{var savedTheme=localStorage.getItem('strata-theme');if(savedTheme)document.documentElement.setAttribute('data-theme',savedTheme)}catch(e){}</script>
 <style>
 :root{--bg:#fff;--bg2:#f5f5f4;--hero:#ededed;--ink:#0a0a0a;--muted:#747982;--line:#dedfe2;--card:#fff;--ease:cubic-bezier(.2,.75,.25,1);box-sizing:border-box;color-scheme:light}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0e10;--bg2:#121316;--hero:#16171a;--ink:#f1f2f3;--muted:#8d929a;--line:#292b2f;--card:#16181b;color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#0d0e10;--bg2:#121316;--hero:#16171a;--ink:#f1f2f3;--muted:#8d929a;--line:#292b2f;--card:#16181b;color-scheme:dark}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
-header{position:fixed;inset:0 0 auto;z-index:10;background:linear-gradient(to bottom,color-mix(in srgb,var(--bg) 92%,transparent),color-mix(in srgb,var(--bg) 68%,transparent) 70%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:0;transition:opacity .45s var(--ease),transform .45s var(--ease);will-change:opacity,transform}header.hidden{opacity:0;transform:translateY(-100%);pointer-events:none}
-.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo img{height:36px;display:block}.links{display:flex;gap:28px;font-size:13px}.links a{position:relative;color:var(--muted)}.links a[aria-current],.links a:hover{color:var(--ink)}.links a:after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:1px;background:currentColor;transform:scaleX(0);transition:transform .3s var(--ease)}.links a:hover:after,.links a[aria-current]:after{transform:scaleX(1)}.nav-actions{display:flex;align-items:center;gap:10px}
+header{position:fixed;inset:0 0 auto;width:100%;height:92px;z-index:10;display:flex;align-items:center;padding-top:env(safe-area-inset-top,0px);background:linear-gradient(to bottom,color-mix(in srgb,var(--bg) 92%,transparent),color-mix(in srgb,var(--bg) 68%,transparent) 70%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:0;transition:background .4s,height .4s,backdrop-filter .4s,opacity .45s var(--ease),transform .5s var(--ease);will-change:opacity,transform}header.s{height:68px;background:color-mix(in srgb,var(--bg) 72%,transparent);border-bottom:1px solid var(--line)}header.h{transform:translateY(-100%);pointer-events:none}
+.nav{width:100%;min-height:92px;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo img{height:36px;display:block}.links{display:flex;gap:28px;font-size:13px}.links a{position:relative;color:var(--muted)}.links a[aria-current],.links a:hover{color:var(--ink)}.links a:after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:1px;background:currentColor;transform:scaleX(0);transition:transform .3s var(--ease)}.links a:hover:after,.links a[aria-current]:after{transform:scaleX(1)}.nav-actions{display:flex;align-items:center;gap:10px}
 .theme-toggle{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:transform .5s var(--ease),border-color .3s}.theme-toggle:hover{transform:rotate(180deg);border-color:var(--ink)}.theme-toggle svg{width:18px;height:18px;stroke:currentColor;stroke-width:1.6;fill:none}
 .btn{display:inline-flex;align-items:center;gap:12px;padding:13px 20px;border-radius:100px;background:var(--ink);color:var(--bg);font:600 13px Inter;transition:transform .3s var(--ease)}.btn:hover{transform:translateY(-2px)}.btn span{font-size:17px}
 .hero{padding:176px 0 90px;background:var(--hero);overflow:hidden;position:relative}.hero:after{content:"STRATA";position:absolute;right:-20px;bottom:-50px;font:800 clamp(120px,24vw,340px)/.8 Manrope;color:transparent;-webkit-text-stroke:1px #d2d3d5;pointer-events:none}.kicker{font:700 10px Manrope;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}.hero h1{font:500 clamp(54px,9vw,112px)/.95 Inter;letter-spacing:-.055em;margin:0;max-width:950px}.hero h1 span{color:#9a9fa6}.hero p{font-size:17px;line-height:1.7;color:var(--muted);max-width:510px;margin:28px 0 0}
@@ -35,19 +34,20 @@ header{position:fixed;inset:0 0 auto;z-index:10;background:linear-gradient(to bo
 footer{padding:44px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}.copyright{color:var(--muted);font-size:11px}.footer-links{display:flex;gap:24px;font-size:12px;color:var(--muted)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo img{filter:invert(1);mix-blend-mode:screen}:root:not([data-theme="light"]) .preview{background:linear-gradient(145deg,#202226,#111214)}:root:not([data-theme="light"]) .hero:after{color:transparent;-webkit-text-stroke-color:#2d3035}}
 :root[data-theme="dark"] .logo img{filter:invert(1);mix-blend-mode:screen}:root[data-theme="dark"] .preview{background:linear-gradient(145deg,#202226,#111214)}:root[data-theme="dark"] .hero:after{color:transparent;-webkit-text-stroke-color:#2d3035}
+@media(max-width:900px){header.h{transform:translateY(-200%)}}
 @media(max-width:800px){header .wrap{width:100%}.nav{min-height:116px;padding:12px 24px 54px;position:relative}.links{position:absolute;left:16px;right:16px;bottom:9px;display:flex;justify-content:center;gap:4px;overflow-x:auto;padding:4px 0;white-space:nowrap;scrollbar-width:none}.links::-webkit-scrollbar{display:none}.links a{padding:8px 10px;border-radius:100px}.links a[aria-current]{background:var(--ink);color:var(--bg)}.links a:after{display:none}.grid{grid-template-columns:1fr}.intro{display:block}.intro p{margin-top:16px}.hero{padding-top:180px}}
 @media(max-width:520px){.wrap{width:calc(100% - 32px)}.nav{padding:10px 16px 52px}.logo img{height:31px}.nav .btn{padding:11px 13px;font-size:12px}.theme-toggle{width:38px;height:38px}.hero{padding:168px 0 64px}.hero h1{font-size:clamp(48px,16vw,72px)}.portfolio{padding:70px 0 90px}.grid{gap:18px}.project-body{padding:22px}.project h3{font-size:21px}.footer-links{gap:16px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition-duration:.01ms!important}}
 :focus-visible{outline:3px solid #6f7782;outline-offset:4px}
 .preview.maybach-preview{aspect-ratio:1580/768}
-.project.featured{grid-column:1/-1}.preview.db10-preview{aspect-ratio:1634/768}.preview.radler-preview{aspect-ratio:1600/900}.preview.radler-preview img{object-position:center}
+.project.featured{grid-column:1/-1}.preview.db10-preview{aspect-ratio:1634/768}
 </style>
 </head>
 <body>
-<header><div class="wrap nav">
+<header id="hd"><div class="wrap nav">
   <a class="logo" href="/" aria-label="Home"><img src="icons/strata-wordmark.png" alt="Strata Technologies"></a>
   <nav class="links" aria-label="Main navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/portfolio.html" aria-current="page">Portfolio</a><a href="/#about">About</a><a href="/#process">Process</a><a href="/#contact">Contact</a></nav>
-  <div class="nav-actions"><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light and dark theme"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button><a class="btn" href="/#contact">Let’s talk <span>↗</span></a></div>
+  <div class="nav-actions"><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light and dark theme"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"></path></svg></button><a class="btn" href="/#contact">Let’s talk <span>↗</span></a></div>
 </div></header>
 <main>
 <section class="hero"><div class="wrap">
@@ -75,6 +75,7 @@ footer{padding:44px 0}.footer-row{display:flex;justify-content:space-between;ali
       <div class="project-body"><div class="project-top"><h3>RADLER Skeleton 44</h3><span class="arrow">↗</span></div><p>A cinematic watch experience revealing the nine layers of the Skeleton 44 through interactive assembly and storytelling.</p><div class="meta"><div class="tags"><span class="tag">Luxury</span><span class="tag">Watchmaking</span></div></div></div>
     </a>
 
+    
     <a class="project" href="https://stratatechnologies2-collab.github.io/aurelia-estates/" target="_blank" rel="noopener">
       <div class="preview"><img src="portfolio-images/aurelia-estates.jpg" alt="Aurelia Estates website hero" width="1365" height="768" loading="lazy"></div>
       <div class="project-body"><div class="project-top"><h3>Aurelia Estates</h3><span class="arrow">↗</span></div><p>A refined property experience focused on curated homes and confident presentation.</p><div class="meta"><div class="tags"><span class="tag">Property</span><span class="tag">Design</span></div></div></div>
@@ -95,7 +96,7 @@ footer{padding:44px 0}.footer-row{display:flex;justify-content:space-between;ali
       <div class="preview"><img src="portfolio-images/aurelio-vehicles-worldwide.jpg" alt="Aurelio Motors worldwide vehicle shipping website hero" width="1229" height="768" loading="lazy"></div>
       <div class="project-body"><div class="project-top"><h3>Vehicles Shipped Worldwide</h3><span class="arrow">↗</span></div><p>A dedicated showcase communicating reach, service and international vehicle sourcing.</p><div class="meta"><div class="tags"><span class="tag">Automotive</span><span class="tag">Global</span></div></div></div>
     </a>
-
+    
     <a class="project" href="https://stratatechnologies2-collab.github.io/hallam-rowe/" target="_blank" rel="noopener">
       <div class="preview"><img src="portfolio-images/hallam-rowe.jpg" alt="Hallam Rowe website hero" width="1229" height="768" loading="lazy"></div>
       <div class="project-body"><div class="project-top"><h3>Hallam Rowe</h3><span class="arrow">↗</span></div><p>An elegant brand-led website focused on measured typography, imagery and easy navigation.</p><div class="meta"><div class="tags"><span class="tag">Luxury</span><span class="tag">Editorial</span></div></div></div>
@@ -110,9 +111,11 @@ var root=document.documentElement,toggle=document.getElementById('theme-toggle')
 function isDark(){var theme=root.getAttribute('data-theme');return theme?theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches}
 toggle.setAttribute('aria-pressed',isDark());
 toggle.addEventListener('click',function(){var next=isDark()?'light':'dark';root.setAttribute('data-theme',next);toggle.setAttribute('aria-pressed',next==='dark');try{localStorage.setItem('strata-theme',next)}catch(e){}});
-var header=document.querySelector('header'),lastScroll=scrollY;
-addEventListener('scroll',function(){var current=scrollY,goingDown=current>lastScroll;header.classList.toggle('hidden',goingDown&&current>120);lastScroll=Math.max(0,current)},{passive:true});
+var hd=document.querySelector('#hd'),lastScroll=scrollY;
+function onPortfolioScroll(){var y=scrollY;hd.classList.toggle('s',y>40);hd.classList.toggle('h',y>lastScroll&&y>500);lastScroll=y}
+addEventListener('scroll',onPortfolioScroll,{passive:true});onPortfolioScroll();
 document.getElementById('year').textContent=new Date().getFullYear()
 </script>
-</body>
-</html>
+
+
+</body></html>
